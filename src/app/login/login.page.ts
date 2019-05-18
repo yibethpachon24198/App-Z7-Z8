@@ -11,5 +11,8 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  login(){ 
+    console.log("Ingrese a login");
+  }
 
 }

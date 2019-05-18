@@ -9,8 +9,16 @@
       <ion-img src="https://cdn.dribbble.com/users/2648025/screenshots/5435667/freepik2_2x.jpg"></ion-img>
   </ion-card>
   <ion-card>
-    <ion-input placeholder="Usuario">|<ion-icon slot="start" color="dark" name="logo-ionitron"> </ion-icon></ion-input> 
-    <ion-input placeholder="Contraseña"><ion-icon slot="start" color="dark" name="lock"></ion-icon></ion-input>
-    <ion-button expand="block" [routerLink]="['/home/tabs/tab1']" >Ingresar</ion-button>
+    <form (ngSubmit)=login(forma) #forma="ngForm"> 
+      <ion-item>
+        <ion-input ngModel #user="ngModel" name="user" minlength="3" placeholder="Usuario"></ion-input> 
+        <ion-icon slot="end" color="dark" name="logo-ionitron"> </ion-icon>
+      </ion-item>  
+      <ion-item>
+        <ion-input ngModel #password="ngModel" name="password" minlength="3" placeholder="Contraseña"></ion-input>
+        <ion-icon slot="end" color="dark" name="lock"></ion-icon>
+    </ion-item>
+      <ion-button expand="block" type="submit" [disabled]=!forma.valid >Ingresar</ion-button>
+    </form>
   </ion-card>
 </ion-content>
