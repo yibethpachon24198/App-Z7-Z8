@@ -1,24 +1,25 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>Que mira lok@</ion-title>
+    <ion-title>operador</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  <ion-card>
-      <ion-img src="https://cdn.dribbble.com/users/2648025/screenshots/5435667/freepik2_2x.jpg"></ion-img>
-  </ion-card>
-  <ion-card>
-    <form (ngSubmit)=login(forma) #forma="ngForm"> 
-      <ion-item>
-        <ion-input ngModel #user="ngModel" name="user" minlength="3" placeholder="Usuario"></ion-input> 
-        <ion-icon slot="end" color="dark" name="logo-ionitron"> </ion-icon>
-      </ion-item>  
-      <ion-item>
-        <ion-input ngModel #password="ngModel" name="password" minlength="3" placeholder="Contraseña"></ion-input>
-        <ion-icon slot="end" color="dark" name="lock"></ion-icon>
-    </ion-item>
-      <ion-button expand="block" type="submit" [disabled]=!forma.valid >Ingresar</ion-button>
-    </form>
-  </ion-card>
+ 
+  <div class="backgroundTheme">
+    <img class="imageLogin" src="./assets/park.svg" width="70%"/>
+      <form (ngSubmit)=login(forma) #forma="ngForm"> 
+        <ion-item>
+          <ion-input ngModel #user="ngModel" name="user" minlength="3" placeholder="Usuario"></ion-input> 
+          <ion-icon slot="start" color="dark" name="person"> </ion-icon>
+        </ion-item>  
+        <ion-item>
+          <ion-input ngModel #password="ngModel" name="password" minlength="3" placeholder="Contraseña"></ion-input>
+          <ion-icon slot="start" color="dark" name="key"></ion-icon>
+      </ion-item>
+        <ion-button expand="block" type="submit" [disabled]=!forma.valid >Ingresar</ion-button>
+        <ion-button class="boton1">Invitado</ion-button>
+        <ion-button class="boton2">Registro</ion-button>
+      </form>
+  </div>
 </ion-content>
