@@ -7,19 +7,31 @@
 <ion-content>
  
   <div class="backgroundTheme">
-    <img class="imageLogin" src="./assets/park.svg" width="70%"/>
+      <img class="imageLogin" src="./assets/parking.svg" width="70%" height="30%"/>
+<ion-card class="cardi">
       <form (ngSubmit)=login(forma) #forma="ngForm"> 
-        <ion-item>
-          <ion-input ngModel #user="ngModel" name="user" minlength="3" placeholder="Usuario"></ion-input> 
-          <ion-icon slot="start" color="dark" name="person"> </ion-icon>
+        <ion-item color="primary">
+            <ion-icon slot="start" color="light" name="person"> </ion-icon>
+          <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Usuario"></ion-input> 
         </ion-item>  
-        <ion-item>
-          <ion-input ngModel #password="ngModel" name="password" minlength="3" placeholder="Contraseña"></ion-input>
-          <ion-icon slot="start" color="dark" name="key"></ion-icon>
-      </ion-item>
-        <ion-button expand="block" type="submit" [disabled]=!forma.valid >Ingresar</ion-button>
-        <ion-button class="boton1">Invitado</ion-button>
-        <ion-button class="boton2">Registro</ion-button>
+
+        <ion-item color="primary">
+          <ion-icon slot="start" color="light" name="key"></ion-icon>
+          <ion-input required ngModel #password="ngModel" name="password" minlength="3" placeholder="Contraseña"></ion-input>
+        </ion-item>
+
+        <ion-button color="secondary" expand="block" type="submit" [disabled]=!forma.valid>
+            <ion-icon name="log-out" color="light"></ion-icon>Ingresar
+        </ion-button>
+
+        <ion-button color="secondary" routerLink="/Registro">
+          <ion-icon name="contact"></ion-icon>Invitado
+        </ion-button>
+
+        <ion-button color="secondary" routerLink="/Registro">
+          <ion-icon name="today"></ion-icon>Registro
+        </ion-button>
       </form>
+    </ion-card>
   </div>
 </ion-content>

@@ -1,0 +1,39 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+    <div class="backgroundTheme">
+        <img class="imageLogin" src="./assets/parking.svg" width="70%" height="30%"/>
+        <ion-card class="cardi">
+    <span color="secundary">
+     
+    <label class="text">
+      Tenga en cuenta que el administrador revisara su solicitud y dara aprobacion dentro de las 24 horas siguientes al envio de datos
+    </label>
+  
+  </span>
+  <ion-item color="primary">
+      <ion-icon slot="start" color="light" name="mail"></ion-icon>
+    <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Email"></ion-input> 
+  </ion-item>  
+  <ion-item color="primary">
+      <ion-icon slot="start" color="light" name="person"> </ion-icon>
+    <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Usuario"></ion-input> 
+  </ion-item>  
+  <ion-item color="primary">
+      <ion-icon slot="start" color="light" name="key"></ion-icon>
+    <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Contraseña"></ion-input> 
+  </ion-item>  
+  <ion-item color="primary">
+      <ion-icon slot="start" color="light" name="key"></ion-icon>
+    <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Repita la contraseña"></ion-input> 
+  </ion-item>  
+  <ion-button class="registrar" color="secondary" expand="block" type="submit" [disabled]=!forma.valid>
+     Registrar
+  </ion-button>
+</ion-card>
+    </div>
+</ion-content>
