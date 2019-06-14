@@ -1,0 +1,3 @@
+ionicons
+ionic framework
+flaticon
