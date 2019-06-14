@@ -1,12 +1,29 @@
 .backgroundTheme{
-    background-color: rgb(163, 122, 182);
-    height: 80%;
+    background-color: #4c245f;
+    height: 85%;
 
 }
 .backgroundDiv{
-background-color: rgb(163, 122, 182);
-height: 20%;
+background-color:#4c245f;
 }
 .imageLogin{
     text-align: center;
+}
+.imageTree{
+    text-align: center;
+    position: relative;
+    padding: 10px 1px 10px 1px;
+}
+.imageUbication{
+    text-align: end;
+    padding: 10px 1px 10px 1px;
+}
+.war{
+    padding: 10px 25px 10px 40px;
+}
+.loc{
+    padding: 10px 45px 10px 45px;
+}
+.roc{
+    padding: 10px 45px 10px 25px;
 }

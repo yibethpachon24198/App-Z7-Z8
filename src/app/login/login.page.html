@@ -12,23 +12,23 @@
       <form (ngSubmit)=login(forma) #forma="ngForm"> 
         <ion-item color="primary">
             <ion-icon slot="start" color="light" name="person"> </ion-icon>
-          <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Usuario"></ion-input> 
+          <ion-input required ngModel #user="ngModel" name="user" minlength="3" placeholder="Usuario"></ion-input> 
         </ion-item>  
 
         <ion-item color="primary">
           <ion-icon slot="start" color="light" name="key"></ion-icon>
-          <ion-input required ngModel #password="ngModel" name="password" minlength="3" placeholder="Contraseña"></ion-input>
+          <ion-input required ngModel #password="ngModel" name="password" minlength="3" placeholder="Contraseña" type="password"></ion-input>
         </ion-item>
 
         <ion-button color="secondary" expand="block" type="submit" [disabled]=!forma.valid>
             <ion-icon name="log-out" color="light"></ion-icon>Ingresar
         </ion-button>
 
-        <ion-button color="secondary" routerLink="/Registro">
+        <ion-button color="secondary" routerLink="/mapa">
           <ion-icon name="contact"></ion-icon>Invitado
         </ion-button>
 
-        <ion-button color="secondary" routerLink="/Registro">
+        <ion-button color="secondary" routerLink="/registro">
           <ion-icon name="today"></ion-icon>Registro
         </ion-button>
       </form>

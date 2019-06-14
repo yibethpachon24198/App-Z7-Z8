@@ -15,25 +15,27 @@
     </label>
   
   </span>
+  <form (ngSubmit)=login(forma) #forma="ngForm"> 
   <ion-item color="primary">
       <ion-icon slot="start" color="light" name="mail"></ion-icon>
-    <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Email"></ion-input> 
+    <ion-input required ngModel #email="ngModel" name="email" minLength="3" placeholder="Email"></ion-input> 
   </ion-item>  
   <ion-item color="primary">
       <ion-icon slot="start" color="light" name="person"> </ion-icon>
-    <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Usuario"></ion-input> 
+    <ion-input required ngModel #usuario="ngModel" name="usuario" minLength="3" placeholder="Usuario"></ion-input> 
   </ion-item>  
   <ion-item color="primary">
       <ion-icon slot="start" color="light" name="key"></ion-icon>
-    <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Contraseña"></ion-input> 
+    <ion-input required ngModel #contraseña="ngModel" name="contraseña" minLength="3" type="password" placeholder="Contraseña"></ion-input> 
   </ion-item>  
   <ion-item color="primary">
       <ion-icon slot="start" color="light" name="key"></ion-icon>
-    <ion-input required ngModel #user="ngModel" name="user" minLength="3" placeholder="Repita la contraseña"></ion-input> 
+    <ion-input required ngModel #confirmacontraseña="ngModel" name="confirmacontraseña" minLength="3" type="password" placeholder="Repita la contraseña"></ion-input> 
   </ion-item>  
   <ion-button class="registrar" color="secondary" expand="block" type="submit" [disabled]=!forma.valid>
      Registrar
   </ion-button>
+  </form>
 </ion-card>
     </div>
 </ion-content>
